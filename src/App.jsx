@@ -1,13 +1,15 @@
 
 import Header from './components/Header'
-import './App.css'
 
 function App() {
-
   return (
-    <div className="App dark:bg-gray-800 text-white min-h-screen">
+    <div className="App min-vh-100 bg-steam-body-dark text-white">
       <Header />
-      <h1 className="text-4xl font-bold p-4">OFERTAS</h1>
+
+      <main className="container py-5">
+        <h1 className="display-5 fw-bold">OFERTAS</h1>
+        <p className="lead">Bem-vindo à loja. Role para baixo e descubra os melhores jogos.</p>
+      </main>
     </div>
   )
 }
