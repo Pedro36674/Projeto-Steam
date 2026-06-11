@@ -6,10 +6,10 @@ function Header() {
         <i className="bi bi-steam"></i><span className="h4 mb-0">Steam</span>
         </div>
         <nav className="d-flex gap-3">
-          <a className="text-white text-decoration-none" href="#">Loja</a>
-          <a className="text-white text-decoration-none" href="#">Biblioteca</a>
-          <a className="text-white text-decoration-none" href="#">Comunidade</a>
-          <a className="text-white text-decoration-none" href="#">Ajuda</a>
+          <a className="text-white text-decoration-none" href="#loja">Loja</a>
+          <a className="text-white text-decoration-none" href="#biblioteca">Biblioteca</a>
+          <a className="text-white text-decoration-none" href="#comunidade">Comunidade</a>
+          <a className="text-white text-decoration-none" href="#ajuda">Ajuda</a>
         </nav>
       </div>
     </header>

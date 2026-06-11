@@ -23,3 +23,12 @@ nav a {
 .bg-steam-body-dark {
   background-color: #173247;
 }
+
+.btn-comprar {
+  background-color: #038b0fe1;
+  color: white;
+}
+
+.btn-comprar:hover {
+  background-color: #038b0f;
+}
