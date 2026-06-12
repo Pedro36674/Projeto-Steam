@@ -12,7 +12,7 @@ export const Jogos = [
     {
         id: 2,
         name: 'The Witcher 3: Wild Hunt',
-        description: 'Embarque em uma jornada épica como Geralt de Rívia, um caçador de monstros, em um mundo aberto repleto de perigos e intrigas.',
+        description: 'Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.',
         price: 99.90,
         coverImage: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ad9240e088f953a84aee814034c50a6a92bf4516/header.jpg?t=1768303991',
         bannerImage: 'https://resources.crowdcontrol.live/images/Witcher3/banner.jpg',
@@ -25,7 +25,7 @@ export const Jogos = [
         description: 'Mergulhe em Night City, uma metrópole futurista e perigosa, onde você pode ser qualquer um, fazer qualquer coisa e ser qualquer um.',
         price: 129.90,
         coverImage: 'https://cdn.akamai.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg',
-        bannerImage: 'https://cdn.akamai.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg',
+        bannerImage: 'https://www.pjsgames.com/cdn/shop/articles/wallpaper-cyberpunk-2077-pc-gog-digital-download.jpg?v=1612569675',
         category: 'RPG',
         featured: false
     },
@@ -35,7 +35,7 @@ export const Jogos = [
         description: 'Explore o reino de Elden Ring, um mundo aberto cheio de aventuras e desafios, onde você pode ser qualquer um e fazer qualquer coisa.',
         price: 149.90,
         coverImage: 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/capsule_616x353.jpg',
-        bannerImage: 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/capsule_616x353.jpg',
+        bannerImage: 'https://i0.wp.com/www.qualbert.com/wp-content/uploads/2022/03/Divider.png?resize=2160%2C562&ssl=1',
         category: 'RPG',
         featured: false
     },
@@ -55,7 +55,7 @@ export const Jogos = [
         description: 'Explore o mundo viking com Ezio Auditore, um assassino que enfrenta a corrupção e a opressão em um mundo em transformação.',
         price: 149.90,
         coverImage: 'https://cdn1.epicgames.com/400347196e674de89c23cc2a7f2121db/offer/AC%20KINGDOM%20PREORDER_STANDARD%20EDITION_EPIC_Key_Art_Wide_3840x2160-3840x2160-485fe17203671386c71bde8110886c7d.jpg',
-        bannerImage: 'https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5KsyqEOChSmgAGGqcz7opE/3920505781b0a6aed2f3b74216ef1f72/ACV_KeyArt11__960x540.png',
+        bannerImage: 'https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/assassins_creed_valhalla_banner_banner_1561eb8e20.webp',
         category: 'Ação',
         featured: false
     },

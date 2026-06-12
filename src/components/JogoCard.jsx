@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom'
+
 function JogoCard({ games }) {
+  const navigate = useNavigate()
+
   if (!games || games.length === 0) {
     return <p className="text-white">Nenhum jogo encontrado.</p>
   }
@@ -14,9 +18,13 @@ function JogoCard({ games }) {
                 <h2 className="card-title fs-5">{game.name}</h2>
                 <p className="card-text">{game.description}</p>
               </div>
-              <a href="#" className="btn btn-comprar mt-3">
+              <button
+                type="button"
+                className="btn btn-comprar mt-3"
+                onClick={() => navigate(`/game/${game.id}`)}
+              >
                 R$ {game.price.toFixed(2).replace('.', ',')}
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -1,5 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 
 function BannerOfertas({ game }) {
+  const navigate = useNavigate()
+
   if (!game) {
     return null
   }
@@ -10,9 +13,12 @@ function BannerOfertas({ game }) {
       <div className="card-body text-white d-flex flex-column justify-content-end">
         <h1 className="card-title">{game.name}</h1>
         <p className="card-text">{game.description}</p>
-        <a href="#" className="btn btn-comprar">
+        <button
+          type="button"
+          className="btn btn-comprar mt-3"
+          onClick={() => navigate(`/game/${game.id}`)}>
           Comprar por R$ {game.price.toFixed(2).replace('.', ',')}
-        </a>
+        </button>
       </div>
     </div>
   )
