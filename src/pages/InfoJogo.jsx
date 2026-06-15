@@ -24,14 +24,24 @@ function InfoJogo() {
     return (
     <div>
         <Header />
-        <section className="info-jogo p-0" style={{ backgroundColor: '#1b2838' }}>
-            <h1 className="text-white">{game.name}</h1>
-            <img src={game.bannerImage} alt={game.name} className="img-fluid mb-3" />
-            <p className="text-white">{game.description}</p>
-            <button className="btn btn-comprar">R$ {game.price.toFixed(2)}</button>
-            <div className="card-body text-white d-flex flex-column justify-content-end">
-            </div>
+        <section className="info-hero" style={{ backgroundImage: `url(${game.bannerImage})` }}>
+          <div className="info-hero-content container">
+            <span className="game-tag">{game.category}</span>
+            <h1>{game.name}</h1>
+            <p>{game.description}</p>
+            <button className="btn btn-steam me-3">R$ {game.price.toFixed(2).replace('.', ',')}</button>
+            <button className="btn btn-secondary" onClick={() => navigate('/loja')}>
+              Voltar para a loja
+            </button>
+          </div>
         </section>
+
+        <main className="container py-5">
+          <section className="info-details p-4 mb-4">
+            <h2 className="fs-4 mb-3">Detalhes do jogo</h2>
+            <p>{game.description}</p>
+          </section>
+        </main>
     </div>
     )
 }

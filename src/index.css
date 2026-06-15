@@ -1,34 +1,329 @@
+:root {
+  color-scheme: dark;
+  --bg-dark: #0b1320;
+  --bg-surface: rgba(10, 18, 31, 0.92);
+  --text-primary: #f5f7fb;
+  --text-secondary: #a8b6d3;
+  --accent: #39b2ff;
+  --accent-soft: rgba(57, 178, 255, 0.15);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
+  min-height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+  background: radial-gradient(circle at top, rgba(57, 178, 255, 0.12), transparent 28%), linear-gradient(180deg, #0a121d 0%, #07101c 45%, #08141e 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 15%, rgba(57, 178, 255, 0.14), transparent 14%), radial-gradient(circle at 85% 10%, rgba(255, 83, 140, 0.09), transparent 12%);
+  z-index: -1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .App {
   min-height: 100vh;
 }
 
-header.bg-steam-dark {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  background: rgba(7, 15, 24, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-nav a {
+.site-header .container {
+  padding: 1rem 0.75rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
-.bg-steam-dark {
-  background-color: #131c27;
-}
-
-.bg-steam-body-dark {
-  background-color: #173247;
-}
-
-.btn-comprar {
-  background-color: #038b0fe1;
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #3ab7ff, #0c77db);
   color: white;
+  box-shadow: 0 18px 35px rgba(56, 178, 255, 0.18);
 }
 
-.btn-comprar:hover {
-  background-color: #038b0f;
+.brand-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand-subtitle {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+.hero-card,
+.game-card,
+.glass-card,
+.info-hero,
+.login-panel {
+  border-radius: 1.25rem;
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  background: rgba(9, 18, 32, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.52) saturate(1.15);
+}
+
+.hero-card-body {
+  position: relative;
+  z-index: 1;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+}
+
+.hero-card-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.hero-card-description {
+  max-width: 740px;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.game-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.95rem;
+  background: var(--accent-soft);
+  color: #7fd2ff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 999px;
+}
+
+.btn-steam {
+  background: linear-gradient(135deg, #3ba9ff, #0164eb);
+  border: none;
+  color: white;
+  box-shadow: 0 16px 35px rgba(3, 139, 239, 0.28);
+}
+
+.btn-steam:hover {
+  background: linear-gradient(135deg, #42b5ff, #086ae8);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f8fbff;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text-primary);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card,
+.glass-card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--text-primary);
+}
+
+.card {
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+.game-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.24);
+}
+
+.card-title {
+  color: #ffffff;
+}
+
+.card-text {
+  color: var(--text-secondary);
+}
+
+.game-card .card-img-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-hero {
+  position: relative;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.info-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 14, 24, 0.35), rgba(5, 11, 20, 0.92) 68%);
+}
+
+.info-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 1rem 4rem;
+}
+
+.info-hero-content h1 {
+  font-size: clamp(2.1rem, 3.6vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.info-hero-content p {
+  max-width: 720px;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.info-hero-content .btn {
+  min-width: 200px;
+}
+
+.info-details {
+  background: rgba(8, 16, 28, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.login-container {
+  background: radial-gradient(circle at top left, rgba(57, 178, 255, 0.18), transparent 18%), linear-gradient(180deg, rgba(4, 10, 18, 0.95), rgba(8, 15, 25, 0.98) 100%);
+}
+
+.login-panel {
+  max-width: 420px;
+  width: 100%;
+  padding: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+}
+
+.login-panel h1 {
+  letter-spacing: -0.03em;
+  margin-bottom: 0.35rem;
+}
+
+.login-panel p {
+  color: var(--text-secondary);
+  margin-bottom: 1.7rem;
+}
+
+.login-form .form-control {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  backdrop-filter: blur(6px);
+}
+
+.login-form .form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(57, 178, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.login-form .form-control::placeholder {
+  color: rgba(248, 251, 255, 0.62);
+}
+
+.login-form button {
+  min-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-card-body {
+    padding: 2rem;
+  }
+
+  .info-hero-content {
+    padding: 3rem 1rem 3rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
 }
